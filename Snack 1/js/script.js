@@ -12,12 +12,19 @@ var numero = 0;
 var somma = 0;
 
 for (var i = 0; i < 5; i++){
+
   numero = parseInt(prompt("Inserisci qui un numero, grazie:"));
-  somma += numero;
+
+    while (isNaN(numero)) {
+      numero = parseInt(prompt("Non hai scritto un numero! Per favore, scrivi solo numeri:"));
+    }
+
+    somma += numero;
+
 }
 
 console.log(somma);
-document.getElementById("risultato").innerHTML = "La somma dei 5 numeri scelti è " + somma;
+document.getElementById("risultato").innerHTML = "La somma dei primi 5 numeri scelti è " + somma;
 
 
 //Secondo Metodo - Ciclo WHILE:
@@ -27,8 +34,14 @@ var totale = 0;
 
 while (j < 5) {
   numero = parseInt(prompt("Inserisci qui un numero, per favore:"));
+
+  while (isNaN(numero)) {
+    numero = parseInt(prompt("Non hai scritto un numero! Per favore, scrivi solo numeri:"));
+  }
+
   totale += numero;
   j++;
+
 }
 
 console.log(somma);
