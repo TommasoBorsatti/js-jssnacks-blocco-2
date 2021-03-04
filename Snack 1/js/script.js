@@ -20,6 +20,7 @@ for (var i = 0; i < 5; i++){
     }
 
     somma += numero;
+    console.log(numero);
 
 }
 
@@ -40,6 +41,7 @@ while (j < 5) {
   }
 
   totale += numero;
+  console.log(numero);
   j++;
 
 }
