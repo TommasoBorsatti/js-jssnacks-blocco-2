@@ -22,8 +22,7 @@ for (var i = 0; i < 3; i++){
   invitati.push(nomeCasuale);
 
   console.log(nomeCasuale);
-  document.getElementById('lista').innerHTML += "<li>" + nomeCasuale + "</li>"
+  document.getElementById('lista').innerHTML += "<li>" + nomeCasuale + "</li>";
 }
 
 console.log(invitati);
-  
