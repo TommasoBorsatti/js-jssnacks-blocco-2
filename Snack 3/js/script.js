@@ -14,8 +14,8 @@ var r=0;
 
 for (var i = 0; i < 3; i++){
 
-j = parseInt(Math.random() * 5)
-r = parseInt(Math.random() * 5);
+  j = Math.floor(Math.random() * 5);
+  r = Math.floor(Math.random() * 5);
   nomeCasuale = nomi[j] + " " + cognomi[r];
   console.log(nomeCasuale);
   document.getElementById('lista').innerHTML += "<li>" + nomeCasuale + "</li>"
