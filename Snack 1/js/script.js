@@ -1,35 +1,35 @@
 
-/*
-L’utente inserisce due numeri in successione, con due prompt. Il software stampa il maggiore.
+/* l software deve chiedere per 5 volte all’utente di inserire un
+numero. Il programma stampa la somma di tutti i numeri
+inseriti. Esegui questo programma in due versioni, con il for
+e con il while.
 */
 
-alert("WOW! Questo programma ti indica quale tra due numeri scritti in successione è il numero maggiore!")
 
-/*
-1. Chiediamo di inserire il primo numero con prompt e definiamo la prima variabile
-*/
+//Primo Metodo - Ciclo FOR:
 
-primoNumero = prompt("Inserisci il primo numero!");
+// var numero = 0;
+// var somma = 0;
+//
+// for (var i = 0; i < 5; i++){
+//   numero = parseInt(prompt("Inserisci qui un numero, grazie:"));
+//   somma += numero;
+// }
+//
+// console.log(somma);
+// document.getElementById("risultato").innerHTML = "La somma dei 5 numeri scelti è " + somma;
 
-/*
-2. Chiediamo di inserire il secondo numero con prompt e definiamo la seconda variabile
-*/
 
-secondoNumero = prompt("Molto bene: ora inserisci il secondo numero!");
+//Secondo Metodo - Ciclo WHILE:
 
-/*
-3. Confrontiamo la prima variabile con la seconda. SE la prima è maggiore la stampiamo.
-SE invece è minore stampiamo l'altra. Se i numeri sono uguali compare un messaggio.
-*/
+var j = 0;
+somma = 0;
 
-if (primoNumero > secondoNumero) {
-  document.getElementById('risultato').innerHTML = ("il numero maggiore è il primo, ossia " + primoNumero);
+while (j < 5) {
+  numero = parseInt(prompt("Inserisci qui un numero, per favore:"));
+  somma += numero;
+  j++;
 }
 
-else if (primoNumero < secondoNumero) {
-  document.getElementById('risultato').innerHTML = ("il numero maggiore è il secondo, ossia " + secondoNumero);
-}
-
-else {
-  document.getElementById('risultato').innerHTML = ("Hai scelto due numeri uguali: cosa ti costava leggere meglio?")
-}
+console.log(somma);
+document.getElementById("risultato").innerHTML = "La somma dei 5 numeri scelti è " + somma;
